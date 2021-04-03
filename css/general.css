@@ -13,7 +13,7 @@ body, html {
 	width: 100%;
 	overflow-x:hidden;
 }
-.section-heading:hover{
+h4.section-heading:hover{
 	color:#1abc9c;
 }
 
