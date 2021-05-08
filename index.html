@@ -222,8 +222,15 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                  <div class="wow fadeInRightBig" data-animation-delay="200">   
                      <h3 class="section-heading" style='text-align: justify;color:#164FC9'>Schedule</h3>
                      <p id='cc' class="lead" style="text-align:justify; display:none"><b>TBA</b></p>
-                  <button onClick="china()" >1</button>
-                  <button onClick="londen()" >2</button>
+                  <button onClick="china()" >China/Singapore</button>
+                  <button onClick="londen()" >Londen</button>
+                  <button onClick="europe()" >Europe (Central)</button>
+                  <button onClick="india()" >India (New Delhi)</button>
+                  <button onClick="Australia()" >Australia (Sydney)</button>
+                  <button onClick="japan()" >Japan/Korea</button>
+                  <button onClick="amew()" >N. America (West)</button>
+                  <button onClick="amee()" >N. America (East)</button>
+
 
                  </div>
 
@@ -318,6 +325,54 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                     </tr>
                    </table>
                  </div>
+<!--              Europe               -->
+                 <div class="wow fadeInRightBig" data-animation-delay="200" id="europe" style="display:none">
+                   <table class="table" style="width:100%">
+                     <tr class="info">
+                       <td>4:00am-4:10am</td>
+                       <td><strong>Opening Remarks</strong></td>
+                       <td>Xiu-Shen Wei and Jian Yang</td>
+                     </tr>
+                     <tr class="success">
+                       <td>4:10am-4:50am</td>
+                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
+                       <td>Serge Belongie</td>
+                     </tr>
+                     <tr class="success">
+                       <td>4:50am-5:25am</td>
+                       <td><strong>Part II: Fine-Grained Image Recognition (1)	(35min)</strong></td>
+                       <td>Xiu-Shen Wei</td>
+                     </tr>
+                    <tr class="success">
+                       <td>5:25am-6:15am</td>
+                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
+                       <td>Pitor Koniusz and Lei Wang</td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                       <td><strong>Break</strong></td>
+                       <td></td>
+                    </tr>
+                    <tr class="success">
+                       <td>11:00am-11:35am</td>
+                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
+                       <td>Yi-Zhe Song</td>
+                     </tr>
+                     <tr class="success">
+                       <td>11:35am-12:10am</td>
+                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
+                       <td>Jiashi Feng and Bingyi Kang</td>
+                     </tr>
+                    <tr class="success">
+                       <td>12:10am-12:45am</td>
+                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
+                       <td>Dian Shao</td>
+                    </tr>
+                   </table>
+                 </div>
+              
+              
+              
              </div>
           
           
@@ -363,14 +418,26 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
    function china() {
        var china=document.getElementById('china');
        var londen=docunment.getElementById('londen');
+       var europe=document.getElementById('europe');
        china.style.display="block";
        londen.style.display="none";
+       europe.style.display="none";
    }
    function londen() {
        var china=document.getElementById('china');
        var londen=docunment.getElementById('londen');
+       var europe=document.getElementById('europe');
        china.style.display="none";
        londen.style.display="block";
+       europe.style.display="none";
+   }
+     function europe() {
+       var china=document.getElementById('china');
+       var londen=docunment.getElementById('londen');
+       var europe=document.getElementById('europe');
+       china.style.display="none";
+       londen.style.display="none";
+       europe.style.display="block";
    }
   </script>
      <!-- Smoothscroll -->
