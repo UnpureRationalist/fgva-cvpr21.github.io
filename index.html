@@ -222,10 +222,13 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                  <div class="wow fadeInRightBig" data-animation-delay="200">   
                      <h3 class="section-heading" style='text-align: justify;color:#164FC9'>Schedule</h3>
                      <p id='cc' class="lead" style="text-align:justify; display:none"><b>TBA</b></p>
-                  <button id='china' onClick="change()" ></button>
+                  <button onClick="china()" >1</button>
+                  <button onClick="londen()" >2</button>
+
                  </div>
 
              <div class="container" >				
+<!--               China -->
                  <div class="wow fadeInRightBig" data-animation-delay="200" id="china" style="display:none">
                    <table class="table" style="width:100%">
                      <tr class="info">
@@ -265,6 +268,51 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                      </tr>
                     <tr class="success">
                        <td>6:10pm-6:45pm</td>
+                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
+                       <td>Dian Shao</td>
+                    </tr>
+                   </table>
+                 </div>   
+<!--               London -->
+              <div class="wow fadeInRightBig" data-animation-delay="200" id="london" style="display:none">
+                   <table class="table" style="width:100%">
+                     <tr class="info">
+                       <td>3:00am-3:10am</td>
+                       <td><strong>Opening Remarks</strong></td>
+                       <td>Xiu-Shen Wei and Jian Yang</td>
+                     </tr>
+                     <tr class="success">
+                       <td>3:10am-3:50am</td>
+                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
+                       <td>Serge Belongie</td>
+                     </tr>
+                     <tr class="success">
+                       <td>3:50am-4:25am</td>
+                       <td><strong>Part II: Fine-Grained Image Recognition (1)	(35min)</strong></td>
+                       <td>Xiu-Shen Wei</td>
+                     </tr>
+                    <tr class="success">
+                       <td>4:25am-5:15am</td>
+                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
+                       <td>Pitor Koniusz and Lei Wang</td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                       <td><strong>Break</strong></td>
+                       <td></td>
+                    </tr>
+                    <tr class="success">
+                       <td>10:00am-10:35am</td>
+                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
+                       <td>Yi-Zhe Song</td>
+                     </tr>
+                     <tr class="success">
+                       <td>10:35am-11:10am</td>
+                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
+                       <td>Jiashi Feng and Bingyi Kang</td>
+                     </tr>
+                    <tr class="success">
+                       <td>11:10am-11:45am</td>
                        <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
                        <td>Dian Shao</td>
                     </tr>
@@ -312,9 +360,17 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
      </script>
   
   <script>
-   function change() {
-
-       document.getElementById('china').style.display="block";
+   function china() {
+       var china=document.getElementById('china');
+       var londen=docunment.getElementById('londen');
+       china.style.display="block";
+       londen.style.display="none";
+   }
+   function londen() {
+       var china=document.getElementById('china');
+       var londen=docunment.getElementById('londen');
+       china.style.display="none";
+       londen.style.display="block";
    }
   </script>
      <!-- Smoothscroll -->
