@@ -221,9 +221,9 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
          <div class="container">				
                  <div class="wow fadeInRightBig" data-animation-delay="200">   
                      <h3 class="section-heading" style='text-align: justify;color:#164FC9'>Schedule</h3>
-                  <button onClick="change()">1</button>
-<!--                   <button onClick="londen()" >Londen</button>
-                  <button onClick="europe()" >Europe (Central)</button>
+                  <button onClick="change1()">China/Singapore</button>
+                  <button onClick="change2()" >Londen</button>
+                 <!-- <button onClick="europe()" >Europe (Central)</button>
                   <button onClick="india()" >India (New Delhi)</button>
                   <button onClick="Australia()" >Australia (Sydney)</button>
                   <button onClick="japan()" >Japan/Korea</button>
@@ -280,7 +280,7 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                    </table>
                  </div>   
 <!--               London -->
-<!--               <div class="wow fadeInRightBig" data-animation-delay="200" id="london" style="display:none">
+                 <div class="wow fadeInRightBig" data-animation-delay="200" id="london" style="display:block">
                    <table class="table" style="width:100%">
                      <tr class="info">
                        <td>3:00am-3:10am</td>
@@ -323,7 +323,7 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                        <td>Dian Shao</td>
                     </tr>
                    </table>
-                 </div> -->
+                 </div> 
               
 <!--              Europe               -->
 <!--                  <div class="wow fadeInRightBig" data-animation-delay="200" id="europe" style="display:none">
@@ -414,14 +414,14 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
      </script>
   
   <script>
-   function change() {
-//        var china=document.getElementById('china');
-//        var londen=docunment.getElementById('londen');
+   function change1() {
+       var china=document.getElementById('china');
+       var londen=docunment.getElementById('londen');
 //        var europe=document.getElementById('europe');
-//        china.style.display="block";
-//        londen.style.display="none";
+       china.style.display="block";
+       londen.style.display="none";
 //        europe.style.display="none";
-          document.getElementById('china').style.display="block"
+//           document.getElementById('china').style.display="block"
           
    }
 //    function londen() {
