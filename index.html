@@ -235,8 +235,7 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
 
              <div class="container" >				
 <!--               China -->
-                 <div class="wow fadeInRightBig" data-animation-delay="200" id="china" style="display:none">
-                   <table class="table" style="width:100%">
+                   <table class="table" style="width:100%;display:none" id="china" >
                      <tr class="info">
                        <td>10:00am-10:10am</td>
                        <td><strong>Opening Remarks</strong></td>
@@ -278,10 +277,8 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                        <td>Dian Shao</td>
                     </tr>
                    </table>
-                 </div>   
 <!--               London -->
-                 <div class="wow fadeInRightBig" data-animation-delay="200" id="london" style="display:block">
-                   <table class="table" style="width:100%">
+                   <table class="table" id="london" style="width:100%;display:block">
                      <tr class="info">
                        <td>3:00am-3:10am</td>
                        <td><strong>Opening Remarks</strong></td>
@@ -323,11 +320,9 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                        <td>Dian Shao</td>
                     </tr>
                    </table>
-                 </div> 
               
 <!--              Europe               -->
-<!--                  <div class="wow fadeInRightBig" data-animation-delay="200" id="europe" style="display:none">
-                   <table class="table" style="width:100%">
+                   <table class="table" id="europe" style="width:100%;display:none">
                      <tr class="info">
                        <td>4:00am-4:10am</td>
                        <td><strong>Opening Remarks</strong></td>
@@ -369,10 +364,53 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
                        <td>Dian Shao</td>
                     </tr>
                    </table>
-                 </div> -->
               
-              
+<!--               India (New Delhi) -->
+                   <table class="table" id="india" style="width:100%;display:none">
+                     <tr class="info">
+                       <td>7:30am-7:40am</td>
+                       <td><strong>Opening Remarks</strong></td>
+                       <td>Xiu-Shen Wei and Jian Yang</td>
+                     </tr>
+                     <tr class="success">
+                       <td>7:40am-8:20am</td>
+                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
+                       <td>Serge Belongie</td>
+                     </tr>
+                     <tr class="success">
+                       <td>8:20am-8:55am</td>
+                       <td><strong>Part II: Fine-Grained Image Recognition (1)	(35min)</strong></td>
+                       <td>Xiu-Shen Wei</td>
+                     </tr>
+                    <tr class="success">
+                       <td>8:55am-9:45am</td>
+                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
+                       <td>Pitor Koniusz and Lei Wang</td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                       <td><strong>Break</strong></td>
+                       <td></td>
+                    </tr>
+                    <tr class="success">
+                       <td>2:30pm-3:05pm</td>
+                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
+                       <td>Yi-Zhe Song</td>
+                     </tr>
+                     <tr class="success">
+                       <td>3:05pm-3:40pm</td>
+                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
+                       <td>Jiashi Feng and Bingyi Kang</td>
+                     </tr>
+                    <tr class="success">
+                       <td>3:40pm-4:15pm</td>
+                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
+                       <td>Dian Shao</td>
+                    </tr>
+                   </table>
              </div>
+          
+          
           
           
           
@@ -415,8 +453,8 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
   
   <script>
    function change1() {
-       var china=document.getElementById('china');
-       var londen=docunment.getElementById('londen');
+       var china=document.getElementById("china");
+       var londen=docunment.getElementById("londen");
 //        var europe=document.getElementById('europe');
        china.style.display="block";
        londen.style.display="none";
