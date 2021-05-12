@@ -648,10 +648,9 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
   <script>
    $("ul").on("click","li",function(){
         var id = $(this).attr("id")
-        alert(id)
         $(".wows").css("display","none");
         $(".wows").css("visibility","hidden");
-        $("#"+id).css("display","block!important");
+        $("#"+id).css("display","block");
         $("#"+id).css("visibility","visible!important");
     });
    function change1() {
