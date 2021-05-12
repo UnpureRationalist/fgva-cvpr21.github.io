@@ -649,7 +649,9 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
    $("ul").on("click","li",function(){
         var id = $(this).attr("id")
         $(".wows").css("display","none");
+        $(".wows").css("visibility","hidden");
         $("#"+id).css("display","block");
+        $("#"+id).css("visibility","visible");
     });
    function change1() {
        var china=document.getElementById("china");
