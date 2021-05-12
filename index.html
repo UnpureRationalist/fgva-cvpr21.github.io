@@ -34,7 +34,7 @@
      
      <!-- Magnific Popup core CSS file -->
      <link rel="stylesheet" href="css/magnific-popup.css"> 
-     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+     <script src="js/vue.js"></script>
      <script src="js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
      <!--[if IE 9]>
          <script src="js/PIE_IE9.js"></script>
@@ -220,393 +220,62 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
          <div class="container">        
                  <div class="wow fadeInRightBig" data-animation-delay="200">   
                      <h3 class="section-heading" style='text-align: justify;color:#164FC9'>Schedule</h3>
-                  <button onClick="change1()">China/Singapore</button>
-<!--                   <button onClick="change2()" >Londen</button> -->
-                 <!-- <button onClick="europe()" >Europe (Central)</button>
-                  <button onClick="india()" >India (New Delhi)</button>
-                  <button onClick="Australia()" >Australia (Sydney)</button>
-                  <button onClick="japan()" >Japan/Korea</button>
-                  <button onClick="amew()" >N. America (West)</button>
-                  <button onClick="amee()" >N. America (East)</button> -->
-                 <ul>
-        <li id="china">
-     china            
-        </li>
-        <li id="londen">
-            londen            
-               </li>
-              
+        <div id="controller">
+          <div id='row fadeInRightBig'>
+          <div class="title">
+            <span v-for="(item,index) of country"  :class="currentCountry == index ? 'titleItemSelect' : 'titleItem'" @click="changeIndex(index)">
+              {{item}}
+            </span>
+          </div>
+          <div class="wow">
+              <table class="table wows" style="width:100%;display:block;" id="china">
+                <tr class="info">
+                  <td>{{tableData[currentCountry][0]}}</td>
+                  <td><strong>Opening Remarks</strong></td>
+                  <td>Xiu-Shen Wei and Jian Yang</td>
+                </tr>
+                <tr class="success">
+                  <td>{{tableData[currentCountry][1]}}</td>
+                  <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
+                  <td>Serge Belongie</td>
+                </tr>
+                <tr class="success">
+                  <td>{{tableData[currentCountry][2]}}</td>
+                  <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
+                  <td>Xiu-Shen Wei</td>
+                </tr>
+               <tr class="success">
+                  <td>{{tableData[currentCountry][3]}}</td>
+                  <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
+                  <td>Pitor Koniusz and Lei Wang</td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td><strong>Break</strong></td>
+                  <td></td>
+               </tr>
+               <tr class="success">
+                  <td>{{tableData[currentCountry][4]}}</td>
+                  <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
+                  <td>Yi-Zhe Song</td>
+                </tr>
+                <tr class="success">
+                  <td>{{tableData[currentCountry][5]}}</td>
+                  <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
+                  <td>Jiashi Feng and Bingyi Kang</td>
+                </tr>
+               <tr class="success">
+                  <td>{{tableData[currentCountry][6]}}</td>
+                  <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
+                  <td>Dian Shao</td>
+               </tr>
+            </table>
+          </div>
+        </div>
+        </div>              
     </ul>
 
                  </div>
-
-             <div class="container" >       
-<!--               China -->
-               <div class="wow">
-                   <table class="table wows" style="width:100%;display:block;" id="china">
-                     <tr class="info">
-                       <td>10:00am-10:10am</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>10:10am-10:50am</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>10:50am-11:25am</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>11:25am-12:15pm</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>5:00pm-5:35pm</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>5:35pm-6:10pm</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>6:10pm-6:45pm</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                </table></div>
-<!--               London -->
-              <div class="wow">
-                   <table  class="table wows" style="width:100%;display:block;" id="londen">
-                     <tr class="info">
-                       <td>3:00am-3:10am</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>3:10am-3:50am</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>3:50am-4:25am</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>4:25am-5:15am</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>10:00am-10:35am</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>10:35am-11:10am</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>11:10am-11:45am</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div>
-<!--              Europe               -->
-<!--               <div class="wow wows">
-                   <table class="table" id="europe" style="width:100%;display:none">
-                     <tr class="info">
-                       <td>4:00am-4:10am</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>4:10am-4:50am</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>4:50am-5:25am</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>5:25am-6:15am</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>11:00am-11:35am</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>11:35am-12:10am</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>12:10am-12:45am</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div> -->
-<!--               India (New Delhi) -->
-<!--               <div class="wow">
-                   <table class="table" id="india" style="width:100%;display:none">
-                     <tr class="info">
-                       <td>7:30am-7:40am</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>7:40am-8:20am</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>8:20am-8:55am</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>8:55am-9:45am</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>2:30pm-3:05pm</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>3:05pm-3:40pm</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>3:40pm-4:15pm</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div> -->
-
-<!-- Australia -->
-<!--               <div class="wow">
-                   <table class="table" id="australia" style="width:100%;display:none">
-                     <tr class="info">
-                       <td>12:00noon-12:10pm</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>12:10pm-12:50pm</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>12:50pm-1:25pm</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>1:25pm-2:15pm</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>7:00pm-7:35pm</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>7:35pm-8:10pm</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>8:10pm-8:45pm</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div> -->
-<!-- Japan/Korea -->
-<!--               <div class="wow">
-                   <table class="table" id="australia" style="width:100%;display:none">
-                     <tr class="info">
-                       <td>11:00am-11:10am</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>11:10am-11:50am</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>11:50am-12:25pm</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>12:25pm-1:15pm</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>6:00pm-6:35pm</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>6:35pm-7:10pm</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>7:10pm-7:45pm</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div> -->
-              <!-- amewe -->
-<!--                   <div class="wow">
-                   <table class="table" id="americaWest" style="width:100%;display:none">
-                     <tr class="info">
-                       <td>7:00pm-7:10pm</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>7:10pm-7:50pm</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>7:50pm-8:25pm</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>8:25pm-9:15pm</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>2:00am-2:35am</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>2:35am-3:10am</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>3:10am-3:45am</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div> -->
-              <!-- america east -->
-<!--               <div class="wow">
-                   <table class="table" id="americaEast" style="width:100%;display:none">
-                     <tr class="info">
-                       <td>10:00pm-10:10pm</td>
-                       <td><strong>Opening Remarks</strong></td>
-                       <td>Xiu-Shen Wei and Jian Yang</td>
-                     </tr>
-                     <tr class="success">
-                       <td>10:10pm-10:50pm</td>
-                       <td><strong>Part I: Introduction of FGVA (40min)</strong></td>
-                       <td>Serge Belongie</td>
-                     </tr>
-                     <tr class="success">
-                       <td>10:50pm-11:25pm</td>
-                       <td><strong>Part II: Fine-Grained Image Recognition (1)  (35min)</strong></td>
-                       <td>Xiu-Shen Wei</td>
-                     </tr>
-                    <tr class="success">
-                       <td>11:25pm-12:15am</td>
-                       <td><strong>Part III: Fine-Grained Image Recognition (2) (50min)</strong></td>
-                       <td>Pitor Koniusz and Lei Wang</td>
-                    </tr>
-                    <tr>
-                       <td></td>
-                       <td><strong>Break</strong></td>
-                       <td></td>
-                    </tr>
-                    <tr class="success">
-                       <td>5:00am-5:35am</td>
-                       <td><strong>Part IV: Fine-Grained Image Retrieval (35min)</strong></td>
-                       <td>Yi-Zhe Song</td>
-                     </tr>
-                     <tr class="success">
-                       <td>5:35am-5:10am</td>
-                       <td><strong>Part V: Long-Tailed Visual Recognition (35min)</strong></td>
-                       <td>Jiashi Feng and Bingyi Kang</td>
-                     </tr>
-                    <tr class="success">
-                       <td>3:10am-3:45am</td>
-                       <td><strong>Part VI: Fine-Grained Video Understanding (35min)</strong></td>
-                       <td>Dian Shao</td>
-                    </tr>
-                   </table>
-              </div> -->
-             </div>
-          
-          
-          
-          
-          
          </div>
      </div>
      
@@ -645,41 +314,29 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
      </script>
   
   <script>
-   $("ul").on("click","li",function(){
-        var id = $(this).attr("id")
-        $(".wows").css("display","none");
-        $(".wows").css("visibility","hidden");
-        $("#id").css("display","block");
-    $("#id").css("height","300px");
-    $("#id").css("width","600px");
-        $("#id").css("visibility","visible!important");
-    });
-   function change1() {
-       var china=document.getElementById("china");
-//        var londen=docunment.getElementById("londen");
-//        var europe=document.getElementById('europe');
-       china.style.display="block";
-    $("#china").css("display","")
-//        europe.style.display="none";
-//           document.getElementById('china').style.display="block"
-          
-   }
-//    function londen() {
-//        var china=document.getElementById('china');
-//        var londen=docunment.getElementById('londen');
-//        var europe=document.getElementById('europe');
-//        china.style.display="none";
-//        londen.style.display="block";
-//        europe.style.display="none";
-//    }
-//      function europe() {
-//        var china=document.getElementById('china');
-//        var londen=docunment.getElementById('londen');
-//        var europe=document.getElementById('europe');
-//        china.style.display="none";
-//        londen.style.display="none";
-//        europe.style.display="block";
-//    }
+  var app = new Vue({
+    el: '#controller',
+    data: {
+      country: ['China','Londen','Europe','India (New Delhi)',' Australia','Japan/Korea','N. America (West)','N. America (East)'],
+      currentCountry: 0,
+      tableData: [
+        ['10:00am-10:10am','10:10am-10:50am','10:50am-11:25am','11:25am-12:15pm','5:00pm-5:35pm','5:35pm-6:10pm','6:10pm-6:45pm'],
+        ['3:00am-3:10am','3:10am-3:50am','3:50am-4:25am','4:25am-5:15am','10:00am-10:35am','10:35am-11:10am','11:10am-11:45am'],
+        ['4:00am-4:10am','4:10am-4:50am','4:50am-5:25am','5:25am-6:15am','11:00am-11:35am','11:35am-12:10pm','12:10pm-12:45pm'],
+        ['7:30am-7:40am','7:40am-8:20am','8:20am-8:55am','8:55am-9:45am','2:30pm-3:05pm','3:05pm-3:40pm','3:40pm-4:15pm'],
+        
+        ['12:00noon-12:10pm','12:10pm-12:50pm','12:50pm-1:25pm','1:25pm-2:15pm','7:00pm-7:35pm','7:35pm-8:10pm','8:10pm-8:45pm'],
+        ['11:00am-11:10am','11:10am-11:50am','11:50am-12:25pm','12:25pm-1:15pm','6:00pm-6:35pm','16:35pm-7:10pm','7:10pm-7:45pm'],
+        ['7:00pm-7:10pm','7:10pm-7:50pm','7:50pm-8:25pm','8:25pm-9:15pm','2:00am-2:35am','2:35am-3:10am','3:10am-3:45am'],
+        ['10:00pm-10:10pm','10:10pm-10:50pm','10:50pm-11:25pm','11:25pm-12:15am','5:00am-5:35am','5:35am-5:10am','3:10am-3:45am']
+      ]
+    },
+    methods: {
+      changeIndex(i) {
+        this.currentCountry = i
+      }
+    }
+  })
   </script>
      <!-- Smoothscroll -->
      <script type="text/javascript" src="js/jquery.corner.js"></script> 
@@ -695,3 +352,19 @@ Fine-Grained Visual Analysis with Deep Learning</h1>
  
  </html>
  
+<style>
+  .title {
+    width:100%;
+  }
+  .titleItem {
+    margin-right: 40px;
+    font-size: 15px;
+  }
+  .titleItemSelect {
+    margin-right: 40px;
+    color: #1abc9c;
+    font-weight: 600;
+    font-size: 15px;
+
+  }
+</style>
