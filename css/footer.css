@@ -1,0 +1,13 @@
+#footer{
+	width: 100%;
+	height: 100px;
+	background: #222222;
+	margin: 20px auto;
+	border-top: #e3e3e9 2px solid;
+	position: relative;
+}
+#footer p{
+    color: white;
+    font-style: italic;
+    margin: auto;
+}
