@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="KDKA">
+    <meta name="author" content="">
+    <!--    Project Name   -->
+    <title>KDKA Project Homepage</title>
+
+    <link rel="shortcut icon" href="./img/gene1.jpg" type="image/x-icon">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link
+        href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+        rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS-->
+    <link href="css/general.css" rel="stylesheet">
+
+    <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- footer css -->
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/install.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="js/iconfont.js"></script>
+
+    <style>
+        .icon {
+          width: 1em;
+          height: 1em;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+        }
+    </style>
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <script src="js/vue.js"></script>
+    <script src="js/modernizr-2.8.3.min.js"></script> <!-- Modernizr /-->
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <!-- StikyMenu -->
+    <script src="js/stickUp.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.navbar-default').stickUp();
+
+            });
+        });
+    </script>
+
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="js/jquery.corner.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/uiMorphingButton_inflow.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+
+    <!-- NavBar-->
+    <nav class="navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">KDKA</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="menuItem"><a href="index.html">Home</a></li>
+                    <li class="menuItem"><a href="installation.html">Installation</a></li>
+                    <li class="menuItem"><a href="tutorial.html">Tutorial</a></li>
+                    <li class="menuItem"><a href="cc.html">Citation & Contact</a></li>
+                    <li class="menuItem"><a href="https://github.com/HiangX/KDKA" target="_blank">
+                        <button style="color: white; background-color: #62c0a0; border: none; border-radius: 5px; padding: 1px 5px;">
+                            <span>GitHub</span>
+                        </button>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <p class="title">
+            Installing KDMA
+        </p>
+        <p class="content">
+            Here's an introduction to install KDMA. We will first introduce the dependencies of KDMA, 
+            then we will present how to install KDMA through lines of command.
+        </p>
+        <p class="sub_title">
+            <b>KDMA Requirements</b>
+        </p>
+        <p class="content">
+            Python dependency
+        </p>
+        <p class="code">
+            Python &gt;= 3.7
+        </p>
+        <p class="content">
+            Basic dependencies
+        </p>
+        <p class="code">
+            pytorch <br>
+            numpy <br>
+            scikit-learn <br>
+            tqdm
+        </p>
+        <p class="sub_title">
+            <b>KDMA Installation</b>
+        </p>
+        <p class="content">
+            Firstly, use git to clone the repository from <a href="https://github.com/HiangX/KDKA" target="_blank" style="color: #3579f6;">GitHub</a>
+            to your local directory:
+
+        </p>
+        <p class="code">
+            git clone git@github.com:HiangX/KDKA.git
+        </p>
+        <p class="content">
+            Then, cd to the KDKA directory and install the requirements through:
+        </p>
+        <p class="code">
+            cd KDKA <br>
+            pip install -r requirements.txt
+        </p>
+        <p class="content">
+            Then, execute following command to install KDKA:
+        </p>
+        <p class="code">
+            python setup.py install
+        </p>
+        <p class="content">
+            Now, you can use KDKA in Python through a simple import:
+        </p>
+        <p class="code">
+            import KDKA <br>
+            ...
+        </p>
+        <p class="content">
+            See <a target="_self" href="tutorial.html" style="color:#3579f6">tutorial</a> to learn how to use KDMA.
+        </p>
+    </div>
+    
+
+    <!-- footer  -->
+    <div id="footer">
+        <p>
+            Copyright &copy; 2023 - xxx Team
+            <br>
+            xxx License
+        </p>
+    </div>
+
+</body>
+
+</html>

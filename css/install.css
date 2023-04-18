@@ -1,0 +1,27 @@
+.main {
+    width: 66%;
+    margin: 30px auto;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+}
+.main .title{
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    color: black;
+}
+.main .content{
+    margin: 0 5% 10px 5%;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: justify;
+}
+.main .sub_title{
+    margin: 20px 5% 20px 5%;
+    font-size: 24px;
+}
+.main .code{
+    margin: 10px 7% 10px 7%;
+    font-size: 16px;
+    color: black;
+}

@@ -10,6 +10,9 @@
     <!--    Project Name   -->
     <title>KDKA Project Homepage</title>
 
+    <link rel="shortcut icon" href="./img/gene1.jpg" type="image/x-icon">
+
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,55 +34,24 @@
     <link href="css/animate.css" rel="stylesheet">
     <!-- footer css -->
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="js/iconfont.js"></script>
+
+    <style>
+        .icon {
+          width: 1em;
+          height: 1em;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+        }
+    </style>
 
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <script src="js/vue.js"></script>
     <script src="js/modernizr-2.8.3.min.js"></script> <!-- Modernizr /-->
-</head>
-
-<body id="home">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
-
-
-    <!-- NavBar-->
-    <nav class="navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">KDKA</a>
-            </div>
-
-            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-
-                    <li class="menuItem"><a href="index.html">Home</a></li>
-                    <li class="menuItem"><a href="installation.html">Installation</a></li>
-                    <li class="menuItem"><a href="tutorial.html">Tutorial</a></li>
-                    <li class="menuItem"><a href="cc.html">Citation & Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div id="footer">
-        <p>
-            Copyright &copy; 2023 - xxx Team
-            <br>
-            xxx License
-        </p>
-    </div>
-
-
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -106,25 +78,166 @@
     <script src="js/uiMorphingButton_inflow.js"></script>
     <!-- Magnific Popup core JS file -->
     <script src="js/jquery.magnific-popup.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+
+    <!-- NavBar-->
+    <nav class="navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">KDKA</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="menuItem"><a href="index.html">Home</a></li>
+                    <li class="menuItem"><a href="installation.html">Installation</a></li>
+                    <li class="menuItem"><a href="tutorial.html">Tutorial</a></li>
+                    <li class="menuItem"><a href="cc.html">Citation & Contact</a></li>
+                    <li class="menuItem"><a href="https://github.com/HiangX/KDKA" target="_blank">
+                        <button style="color: white; background-color: #62c0a0; border: none; border-radius: 5px; padding: 1px 5px;">
+                            <span>GitHub</span>
+                        </button>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="main_content">
+        <div class="left_div">
+            <p class="question">
+                What is KDMA?
+            </p>
+
+            <p class="answer">
+                KDMA, in short of Knowledge Distillation and Knowledge Abduction, is a machine learning method for
+                genomic survival analysis, proposed in <b>A Unified Method of Knowledge Distillation and Knowledge 
+                Abduction for Genomic Survival Analysis</b>.
+            </p>
+            <p class="answer">
+                It is built based on a Cox-Net model 
+                <math display="block" style="display:inline-block;">
+                    <mi class="mathcal">𝒞</mi>
+                  </math>
+                , and further consists of two crucial modules, i.e., KD (knowledge distillation from raw data) and KA (knowledge abduction from prior evidence). 
+                Finally, two losses 
+                <math display="block" style="display:inline-block;">
+                    <mrow>
+                      <mo fence="true" form="prefix">(</mo>
+                      <msub>
+                        <mi class="mathcal">ℒ</mi>
+                        <mrow>
+                          <mrow>
+                            <mi mathvariant="normal">K</mi>
+                          </mrow>
+                          <mrow>
+                            <mi mathvariant="normal">D</mi>
+                          </mrow>
+                        </mrow>
+                      </msub>
+                      <mo fence="true" form="postfix"></mo>
+                    </mrow>
+                  </math> and <math display="block" style="display:inline-block;">
+                    <mrow>
+                      <mo fence="true" form="prefix"></mo>
+                      <msub>
+                        <mi class="mathcal">ℒ</mi>
+                        <mrow>
+                          <mrow>
+                            <mi mathvariant="normal">K</mi>
+                          </mrow>
+                          <mrow>
+                            <mi mathvariant="normal">A</mi>
+                          </mrow>
+                        </mrow>
+                      </msub>
+                      <mo fence="true" form="postfix">)</mo>
+                    </mrow>
+                  </math>
+                derived from these two modules are calculated to drive end-to-end network training.
+            </p>
+        </div>
+
+        <div class="right_div">
+            <img src="img/framework.jpg">
+            <!-- <div>
+                <svg class="icon" aria-hidden="true" style="font-size: 100px">
+                    <use xlink:href="#icon-DNA"></use>
+                </svg>
+                <svg class="icon" aria-hidden="true" style="font-size: 100px; color: #3f73a0">
+                    <use xlink:href="#icon-rengongzhineng"></use>
+                </svg>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="middle">
+        <p class="citation">
+            Citation
+        </p>
+        <p class="citation_content">
+            A Unified Method of Knowledge Distillation and Knowledge Abduction for Genomic Survival Analysis.
+        </p>
+    </div>
+    
+    <div class="quick_start">
+        <p class="sub_title">
+            <b>Quick start</b>
+        </p>
+        <p class="sub_content">
+            You can get alipy simply by:
+        </p>
+        <p class="code">
+            git clone git@github.com:HiangX/KDKA.git <br>
+            cd KDKA <br>
+            pip install -r requirements.txt <br>
+            python setup.py install
+        </p>
+        <p class="sub_content">
+            For detailed installation instruction, please refer to <a href="installation.html" target="_self" style="color: #3579f6">installation guide</a>.
+        </p>
+        <p class="sub_content">
+            KDKA provides several optional usages for different users.
+        </p>
+        <div class="sub_content">
+            <ul>
+                <li>
+                    <b>For the users who are less familiar with python and want to simply apply KDMA to a dataset.</b>
+                    Please refer to <a target="_self" href="tutorial.html" style="color:#3579f6">tutorial</a> to run
+                    the KDMA process in a few lines of codes without knowing about any background knowledge.
+                </li>
+                <li>
+                    <b>For the users who want to learn about the implemention details and perform their own experiments.</b>
+                    Please refer to <a href="https://github.com/HiangX/KDKA" target="_blank" style="color: #3579f6;">GitHub</a>
+                    and <a target="_self" href="tutorial.html" style="color:#3579f6">tutorial</a> to learn the details.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div id="footer">
+        <p>
+            Copyright &copy; 2023 - xxx Team
+            <br>
+            xxx License
+        </p>
+    </div>
+
 </body>
 
 </html>
-
-<style>
-    .title {
-        width: 100%;
-    }
-
-    .titleItem {
-        margin-right: 40px;
-        font-size: 15px;
-    }
-
-    .titleItemSelect {
-        margin-right: 40px;
-        color: #1abc9c;
-        font-weight: 600;
-        font-size: 15px;
-
-    }
-</style>

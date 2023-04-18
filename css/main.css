@@ -1,0 +1,71 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.main_content {
+    width: 66%;
+    margin: 30px auto;
+    height: 380px;
+}
+.main_content .left_div{
+    width: 50%;
+    float: left;
+}
+.main_content .left_div .question{
+    font-size: 40px;
+    margin: left;
+    color: black;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.main_content .left_div .answer{
+    font-size: 16px;
+    text-align: justify;
+}
+.main_content .right_div{
+    margin-top: 30px;
+    padding: 50px;
+}
+.main_content .right_div img{
+    width: 42%;
+    float: right;
+}
+.middle {
+    width: 66%;
+    margin: 0 auto;
+}
+.middle .citation{
+    font-size: 28px;
+    color: black;
+    text-align: center;
+}
+.middle .citation_content{
+    font-size: 17px;
+    text-align: center;
+}
+.quick_start {
+    width: 66%;
+    margin: 30px auto;
+}
+.quick_start .sub_title{
+    font-size: 24px;
+
+}
+.quick_start .sub_content{
+    margin: 10px 3%;
+    font-size: 18px;
+}
+.quick_start .code{
+    margin: 10px 5%;
+    color: black;
+    font-size: 16px;
+    line-height: 28px;
+}
+.quick_start .sub_content ul{
+    margin: 10px 4%;
+    font-size: 18px;
+}
+.quick_start .sub_content ul li{
+    margin: 10px 0;
+}

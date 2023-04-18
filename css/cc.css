@@ -1,0 +1,30 @@
+.cc_main {
+    width: 66%;
+    margin: 30px auto;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+}
+.cc_main .cc_title{
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    color: black;
+}
+.cc_main .cc_sub_title{
+    margin-left: 5%;
+    font-size: 18px;
+    line-height: 24px;
+}
+.cc_main .cc_content{
+    margin-left: 7%;
+    line-height: 20px;
+    font-size: 18px;
+}
+.cc_main .contact_list{
+    margin-left: 5%;
+    line-height: 20px;
+    font-size: 18px;
+}
+.cc_main .contact_list li{
+    margin: 10px 0;
+}
